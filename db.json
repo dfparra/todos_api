@@ -1,0 +1,48 @@
+{
+  "todos": [
+    {
+      "id": "5",
+      "isComplete": false
+    },
+    {
+      "id": "5",
+      "description": "turkey",
+      "isComplete": false
+    },
+    {
+      "id": "5",
+      "description": "probably program",
+      "isComplete": false
+    },
+    {
+      "id": "5",
+      "description": "buy a costume",
+      "isComplete": false
+    },
+    {
+      "id": "5",
+      "description": "decide stuff and things",
+      "isComplete": false
+    },
+    {
+      "id": "b29e5807-6fa1-4ad5-8785-2bf0b7820660",
+      "description": "decide stuff and things",
+      "isComplete": false
+    },
+    {
+      "id": "fd255958-6a3e-4947-92c3-8472155c9bad",
+      "description": "purchase a sushi roll",
+      "isComplete": false
+    },
+    {
+      "id": "702332f4-72eb-4aad-b3e4-239de49b7e3b",
+      "description": "log in 20 hours of work",
+      "isComplete": false
+    },
+    {
+      "id": "71af0a64-9d00-4e34-9d2a-28373f909a2c",
+      "description": "plan 4th of July",
+      "isComplete": false
+    }
+  ]
+}
