@@ -17,16 +17,17 @@ server.use(bodyParser.urlencoded({extended: true}));
 
 server.get('/todos', function(request, response){
   var todos = db.get('todos')
-                 .value()
+                 .value();
   response.send(todos);
 });
 
 server.get('/todos/:id', function(request, response){
-  response.send('GET todos :id');
-  var result = db.get('todos')
-                 .find({ id: '5'})
-                 .value()
-  response.send(result);
+  // response.send('GET todos :id');
+  // console.log(request.params);
+  var todo = db.get('todos')
+                 .find({id: request.params.id})
+                 .value();
+  response.send(todo);
 });
 
 server.post('/todos', function(request, response){
