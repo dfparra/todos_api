@@ -7,8 +7,8 @@ var server = express();
 
 //import my models folder
 var Todo = require('./models/todo.js');
-var testTodo = new Todo('some stuff'); // created the object using code in todo.js
-console.log(testTodo);
+// var testTodo = new Todo('some stuff'); // created the object using code in todo.js
+// console.log(testTodo);
 var port = process.env.PORT || 8080;
 var db = lowdb('db.json');
 
@@ -35,11 +35,14 @@ server.get('/todos/:id', function(request, response){
 });
 
 server.post('/todos', function(request, response){
-  var todo = {
-    id: uuid.v4(),
-    description: request.body.description,
-    isComplete: false
-  };
+  // var todo = {
+  //   id: uuid.v4(),
+  //   description: request.body.description,
+  //   isComplete: false
+  // };
+
+  //New code
+  var todo = new Todo(request.body.description);
 
   var result = db.get('todos')
                  .push(todo)
@@ -50,13 +53,17 @@ server.post('/todos', function(request, response){
 
 server.put('/todos/:id', function(request,response){
   // response.send('PUT todos :id');
-  var updatedTodoInfo = {
-    description: request.body.description,
-    isComplete: request.body.isComplete
-  };
+  // var updatedTodoInfo = {
+  //   description: request.body.description,
+  //   isComplete: request.body.isComplete
+  // };
+
+  //New code
+  var todo = new Todo(request.body.description);
+  todo.updateComplete(request.body.isComplete);
   var updatedTodo = db.get('todos')
                       .find({id: request.params.id})
-                      .assign(updatedTodoInfo)
+                      .assign(todo)
                       .value();
   response.send(updatedTodo);
 

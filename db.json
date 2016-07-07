@@ -1,9 +1,9 @@
 {
   "todos": [
     {
-      "id": "b29e5807-6fa1-4ad5-8785-2bf0b7820660",
-      "description": "decide stuff and things",
-      "isComplete": false
+      "id": "b3b468ed-a7f8-4c40-8eef-40d7289212fa",
+      "description": "take out the trash",
+      "isComplete": "true"
     },
     {
       "id": "702332f4-72eb-4aad-b3e4-239de49b7e3b",
@@ -13,6 +13,11 @@
     {
       "id": "71af0a64-9d00-4e34-9d2a-28373f909a2c",
       "description": "plan 4th of July",
+      "isComplete": false
+    },
+    {
+      "id": "5aa1e331-22e4-4dec-b78d-7b04314e61ea",
+      "description": "take out the trash",
       "isComplete": false
     }
   ]
