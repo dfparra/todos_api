@@ -5,6 +5,10 @@ var lowdb = require('lowdb');
 var uuid = require('uuid');
 var server = express();
 
+//import my models folder
+var Todo = require('./models/todo.js');
+var testTodo = new Todo('some stuff'); // created the object using code in todo.js
+console.log(testTodo);
 var port = process.env.PORT || 8080;
 var db = lowdb('db.json');
 
